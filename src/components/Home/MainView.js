@@ -34,7 +34,8 @@ const GlobalFeedTab = props => {
       <a
         href=""
         className={ props.tab === 'all' ? 'nav-link active' : 'nav-link' }
-        onClick={clickHandler}>
+        onClick={clickHandler}
+        data-cy="global-feed-tab">
         Global Feed
       </a>
     </li>

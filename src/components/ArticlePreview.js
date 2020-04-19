@@ -34,14 +34,14 @@ const ArticlePreview = props => {
   };
 
   return (
-    <div className="article-preview">
+    <div className="article-preview" data-cy="article-container">
       <div className="article-meta">
         <Link to={`/@${article.author.username}`}>
           <img src={article.author.image} alt={article.author.username} />
         </Link>
 
         <div className="info">
-          <Link className="author" to={`/@${article.author.username}`}>
+          <Link className="author" to={`/@${article.author.username}`} data-cy="article-author">
             {article.author.username}
           </Link>
           <span className="date">
@@ -57,8 +57,8 @@ const ArticlePreview = props => {
       </div>
 
       <Link to={`/article/${article.slug}`} className="preview-link">
-        <h1>{article.title}</h1>
-        <p>{article.description}</p>
+        <h1 data-cy="article-title">{article.title}</h1>
+        <p data-cy="article-description">{article.description}</p>
         <span>Read more...</span>
         <ul className="tag-list">
           {

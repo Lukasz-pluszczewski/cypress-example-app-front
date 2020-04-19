@@ -18,7 +18,7 @@ const ArticleList = props => {
   }
 
   return (
-    <div>
+    <div data-cy="article-list">
       {
         props.articles.map(article => {
           return (

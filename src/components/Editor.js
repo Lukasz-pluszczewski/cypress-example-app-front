@@ -109,7 +109,8 @@ class Editor extends React.Component {
                       type="text"
                       placeholder="Article Title"
                       value={this.props.title}
-                      onChange={this.changeTitle} />
+                      onChange={this.changeTitle}
+                      data-cy="article-title-input" />
                   </fieldset>
 
                   <fieldset className="form-group">
@@ -118,7 +119,8 @@ class Editor extends React.Component {
                       type="text"
                       placeholder="What's this article about?"
                       value={this.props.description}
-                      onChange={this.changeDescription} />
+                      onChange={this.changeDescription}
+                      data-cy="article-topic-input" />
                   </fieldset>
 
                   <fieldset className="form-group">
@@ -127,7 +129,8 @@ class Editor extends React.Component {
                       rows="8"
                       placeholder="Write your article (in markdown)"
                       value={this.props.body}
-                      onChange={this.changeBody}>
+                      onChange={this.changeBody}
+                      data-cy="article-content-input">
                     </textarea>
                   </fieldset>
 
@@ -138,9 +141,10 @@ class Editor extends React.Component {
                       placeholder="Enter tags"
                       value={this.props.tagInput}
                       onChange={this.changeTagInput}
-                      onKeyUp={this.watchForEnter} />
+                      onKeyUp={this.watchForEnter}
+                      data-cy="article-tags-input" />
 
-                    <div className="tag-list">
+                    <div className="tag-list" data-cy="article-tag-list">
                       {
                         (this.props.tagList || []).map(tag => {
                           return (
@@ -157,6 +161,7 @@ class Editor extends React.Component {
                   </fieldset>
 
                   <button
+                    data-cy="publish-article-button"
                     className="btn btn-lg pull-xs-right btn-primary"
                     type="button"
                     disabled={this.props.inProgress}

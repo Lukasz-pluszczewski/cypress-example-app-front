@@ -36,19 +36,19 @@ const LoggedInView = props => {
       <ul className="nav navbar-nav pull-xs-right">
 
         <li className="nav-item">
-          <Link to="/" className="nav-link">
+          <Link to="/" className="nav-link" data-cy="home-page-link">
             Home
           </Link>
         </li>
 
         <li className="nav-item">
-          <Link to="/editor" className="nav-link">
+          <Link to="/editor" className="nav-link" data-cy="new-post-link">
             <i className="ion-compose"></i>&nbsp;New Post
           </Link>
         </li>
 
         <li className="nav-item">
-          <Link to="/settings" className="nav-link">
+          <Link to="/settings" className="nav-link" data-cy="settings-link">
             <i className="ion-gear-a"></i>&nbsp;Settings
           </Link>
         </li>
